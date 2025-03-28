@@ -18,6 +18,7 @@ public class TicketFactory {
                 .build();
     }
 
+
     // Method to create a VIP ticket
     public static Ticket createVipTicket(int ticketID, String visitorID, String exhibitionID, LocalDate purchaseDate) {
         return new Ticket.Builder()

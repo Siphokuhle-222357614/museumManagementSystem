@@ -2,6 +2,7 @@ package za.ac.cput.domain;
 import java.time.LocalDate;
 
 
+
 public class Ticket {
     // Attributes
     private int ticketID;
