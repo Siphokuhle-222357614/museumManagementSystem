@@ -4,7 +4,7 @@ import za.ac.cput.domain.Visitor;
 import java.time.LocalDate;
 
 public class visitorFactory {
-
+/*
     public static Visitor createVisitor(int visitorId, String visitorFirstName, String visitorLastName, String visitorEmail, String visitorPhoneNumber) {
         if (visitorId.isNullOrEmpty(visitorId)){
             return null;
@@ -25,9 +25,9 @@ public class visitorFactory {
                 .visitorEmail(visitorEmail)
                 .visitorPhoneNumber(visitorPhoneNumber)
                 .build();
+*/
 
-    /*
-    public static Visitor createVisitor(int visitorId, String visitorFirstName, String visitorLastName, String email, String phoneNumber) {
+    public static Visitor createVisitor(int visitorId, String visitorFirstName, String visitorLastName, String visitorEmail, String visitorPhoneNumber) {
         if (visitorFirstName == null || visitorFirstName.trim().isEmpty() ) {
             throw new IllegalArgumentException("Visitor name cannot be empty.");
         }
@@ -35,12 +35,12 @@ public class visitorFactory {
             throw new IllegalArgumentException("Visitor last name cannot be empty.");
         }
 
-        if (email == null || !isValidEmail(email)) {
+        if (visitorEmail == null || !isValidEmail(visitorEmail)) {
             throw new IllegalArgumentException("Invalid email format.");
         }
 
 
-        if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
+        if (visitorPhoneNumber == null || visitorPhoneNumber.trim().isEmpty()) {
             throw new IllegalArgumentException("Phone number cannot be empty.");
         }
 
@@ -48,16 +48,15 @@ public class visitorFactory {
                 .visitorId(visitorId)
                 .visitorFirstName(visitorFirstName)
                 .visitorLastName(visitorLastName)
-                //.email(email)
-                //.phoneNumber(phoneNumber)
+                .visitorEmail(visitorEmail)
+                .visitorPhoneNumber(visitorPhoneNumber)
                 .build();
     }
-/*
+
     private static boolean isValidEmail(String email) {
         return email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
     }
 
- */
+
     }
 
-}
