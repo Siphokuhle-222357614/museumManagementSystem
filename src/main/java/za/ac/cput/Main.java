@@ -1,24 +1,17 @@
 package za.ac.cput;
 
-
-
-import za.ac.cput.domain.Ticket;
-
-import java.time.LocalDate;
-
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
 
-        Ticket ticket = new Ticket.Builder()
-                .setTicketID(01)
-                .setVisitorID("0000")
-                .setExhibitionID("EGO")
-                .setPurchaseDate(LocalDate.now()) // Current date
-                .setTicketType("Adult")
-                .setPrice(20.00)
-                .setExpiryDate(LocalDate.now().plusDays(30))
-                .build();
-
-        System.out.println(ticket);
+        for (int i = 1; i <= 5; i++) {
+            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+            System.out.println("i = " + i);
+        }
     }
 }
