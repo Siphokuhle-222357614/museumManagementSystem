@@ -1,15 +1,14 @@
 /*Author: Yanga Jilaji
+Student Number: 222582731
 * Due Date: 28 March 2025*/
 package za.ac.cput.domain;
 
-import java.time.LocalDate;
 
 public class Artifact {
 
     private String artifactId;
     private String name;
     private String description;
-    private LocalDate dateOfOrigin;
     private String condition;
     private String material;
     private String location;
@@ -22,7 +21,6 @@ public class Artifact {
         this.artifactId= builder.artifactId;
         this.name= builder.name;
         this.description= builder.description;
-        this.dateOfOrigin= builder.dateOfOrigin;
         this.condition= builder.condition;
         this.material= builder.material;
         this.location= builder.location;
@@ -39,10 +37,9 @@ public class Artifact {
     public String getDescription() {
         return description;
     }
-    public LocalDate getDateOfOrigin() {
-        return dateOfOrigin;
-    }
-    public String getCondition() {
+
+    public String getCondition()
+    {
         return condition;
     }
     public String getMaterial() {
@@ -55,19 +52,18 @@ public class Artifact {
                 "artifactId=" + artifactId +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", dateOfOrigin=" + dateOfOrigin +
                 ", condition='" + condition + '\'' +
                 ", material='" + material + '\'' +
                 ", location='" + location + '\'' +
                 '}';
     }
 
+
     //Builder Class
     public static class Builder {
         private String artifactId;
         private String name;
         private String description;
-        private LocalDate dateOfOrigin;
         private String condition;
         private String material;
         private String location;
@@ -84,10 +80,7 @@ public class Artifact {
             this.description = description;
             return this;
         }
-        public Builder setDateOfOrigin(LocalDate dateOfOrigin) {
-            this.dateOfOrigin = dateOfOrigin;
-            return this;
-        }
+
         public Builder setCondition(String condition){
             this.condition=  condition;
             return this;
@@ -109,12 +102,8 @@ public class Artifact {
             this.name = name;
             return this;
         }
-        public Artifact.Builder description(String description){
+        public Artifact.Builder description(String description) {
             this.description = description;
-            return this;
-        }
-        public Artifact.Builder dateOfOrigin(LocalDate dateOfOrigin) {
-            this.dateOfOrigin = dateOfOrigin;
             return this;
         }
         public Artifact.Builder condition(String condition) {
@@ -135,7 +124,6 @@ public class Artifact {
             this.artifactId= art.artifactId;
             this.name= art.name;
             this.description= description;
-            this.dateOfOrigin= art.dateOfOrigin;
             this.condition= art.condition;
             this.material= art.material;
             this.location= art.location;
