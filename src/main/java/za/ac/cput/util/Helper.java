@@ -1,3 +1,4 @@
+
 /*Aunthor: Bonke Bulana - 220539995
  * Due Date: 28-03-25*/
 package za.ac.cput.util;
@@ -9,10 +10,9 @@ import java.util.regex.Pattern;
 public class Helper {
 
     public static boolean isNullOrEmpty(String str) {
-        if(str.isEmpty() || str == null)
-            return true;
-        return false;
-    }
+        if(str.isEmpty() || str == null){
+          return false;
+        }
 
     public static boolean isValidEmail(String email) {
         String regex = "^(.+)@(.+)$";
@@ -40,5 +40,3 @@ public class Helper {
         //ToDo
         //throw new UnsupportedOperationException();
     }
-
-
