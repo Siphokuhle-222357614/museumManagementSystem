@@ -1,16 +1,16 @@
 /*Author: Yanga Jilaji
-* Due Date: 28 March 2015*/
+Student Number: 222582731
+* Due Date: 28 March 2025*/
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Artifact;
-import za.ac.cput.util.Helper;
-
-import java.time.LocalDate;
+import za.ac.cput.util.ArtifactHelper;
 
 public class ArtifactFactory {
 
     public static Artifact createArtifact(String artifactId, String name, String description){
-              if(Helper.isNullOrEmpty(artifactId) || Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description))
+        //ArtifactHelper Helper;
+        if(ArtifactHelper.isNullOrEmpty(artifactId) || ArtifactHelper.isNullOrEmpty(name) || ArtifactHelper.isNullOrEmpty(description))
                   return null;
 
               return new Artifact.Builder().setArtifactId(artifactId)
@@ -18,34 +18,34 @@ public class ArtifactFactory {
                       .setCondition(description)
                       .build();
     }
-    public static Artifact createArtifact(String artifactId, String name, String description, LocalDate dateOfOrigin, String condition){
-        if(Helper.isNullOrEmpty(artifactId) || Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description)
-                || Helper.isNullOrEmpty(description))
+
+
+    public static Artifact createArtifact(String artifactId, String name, String description, String condition){
+        if(ArtifactHelper.isNullOrEmpty(artifactId) || ArtifactHelper.isNullOrEmpty(name) || ArtifactHelper.isNullOrEmpty(description)
+                || ArtifactHelper.isNullOrEmpty(description))
             return null;
 
         return new Artifact.Builder().setArtifactId(artifactId)
                 .setName(name)
                 .setDescription(description)
-                .setDateOfOrigin(dateOfOrigin)
                 .setCondition(condition)
                 .build();
     }
-
-    public static Artifact createArtifact(String artifactId, String name, String description, LocalDate dateOfOrigin, String condition,
+    public static Artifact createArtifact(String artifactId, String name, String description, String condition,
                                           String material, String location){
-        if(Helper.isNullOrEmpty(artifactId) || Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description)
-            || Helper.isNullOrEmpty(condition)  ||  Helper.isNullOrEmpty(material) ||  Helper.isNullOrEmpty(location))
+        if(ArtifactHelper.isNullOrEmpty(artifactId) || ArtifactHelper.isNullOrEmpty(name) || ArtifactHelper.isNullOrEmpty(description)
+                || ArtifactHelper.isNullOrEmpty(condition)  ||  ArtifactHelper.isNullOrEmpty(material) ||  ArtifactHelper.isNullOrEmpty(location))
             return null;
 
         return new Artifact.Builder().setArtifactId(artifactId)
                 .setName(name)
                 .setDescription(description)
-                .setDateOfOrigin(dateOfOrigin)
                 .setCondition(condition)
                 .setMaterial(material)
                 .setLocation(location)
                 .build();
     }
+
 
 }
 
